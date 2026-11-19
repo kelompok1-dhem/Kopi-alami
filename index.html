@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kopi Kita — kopi, minuman, dan makanan favorit. Pesan mudah melalui WhatsApp, ongkir antar Rp2.000.">
+<title>Kopi Kita | Ngopi • Ngemil • Bahagia</title>
+<style>
+:root{--coffee:#542006;--brown:#71300a;--gold:#f5b52e;--cream:#fff4e6;--paper:#fffaf3;--muted:#8d6b55;--line:#ead8c4;--green:#159447;--shadow:0 8px 24px #60300d18}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:#fff6e9;color:#32190d;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.topbar{position:sticky;top:0;z-index:10;background:#fff8edee;backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;gap:22px;padding:12px max(3vw,18px);box-shadow:0 3px 15px #5020000b}.brand{display:flex;align-items:center;gap:10px;min-width:220px;color:var(--coffee)}.brand-icon{font-size:38px}.brand strong{display:block;font-family:Georgia,serif;font-size:27px;font-style:italic;line-height:1}.brand small{font-size:11px;color:#76543d}.nav{display:flex;gap:8px;align-items:center}.nav a{color:#3d2113;text-decoration:none;padding:10px 14px;border-radius:24px;font-weight:700;font-size:14px}.nav a:hover,.nav a.active{background:var(--coffee);color:white}.search{margin-left:auto;display:flex;align-items:center;background:white;border:1px solid var(--line);border-radius:30px;padding:0 14px;min-width:210px}.search input{border:0;outline:0;background:transparent;padding:11px;width:100%}.cart-pill{border:0;background:var(--coffee);color:white;border-radius:24px;padding:11px 17px;font-weight:800;white-space:nowrap}.wrap{max-width:1500px;margin:auto;padding:18px 22px}.hero{height:260px;border-radius:24px;overflow:hidden;position:relative;background:linear-gradient(90deg,#371605b5,#3716051c),url('assets/hero.jpg') center/cover;box-shadow:var(--shadow);display:flex;align-items:center;padding:35px;color:#fff}.hero-copy{max-width:590px;text-shadow:0 2px 7px #3110009c}.hero h1{font-size:clamp(32px,4vw,56px);line-height:1.02;margin:0 0 12px;font-family:Georgia,serif;font-style:italic}.hero p{font-size:18px;font-weight:700;margin:0 0 20px}.hero .cta{background:var(--gold);color:#321400;border:0;border-radius:30px;padding:12px 22px;font-weight:900}.shipping{position:absolute;right:25px;top:22px;background:#fff2d9;color:var(--coffee);border-radius:18px;padding:13px 20px;text-align:center;font-weight:900;transform:rotate(4deg);box-shadow:var(--shadow)}.shipping b{display:block;font-size:27px;color:#d92d24}.layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:20px;margin-top:20px;align-items:start}.categories{display:flex;gap:10px;overflow:auto;padding:4px 0 14px}.cat{border:1px solid var(--line);background:#ffead5;border-radius:28px;padding:11px 18px;font-weight:800;white-space:nowrap;color:#4a2918}.cat.active,.cat:hover{background:var(--coffee);color:white}.section-title{display:flex;justify-content:space-between;align-items:center;margin:5px 0 12px}.section-title h2{margin:0;font-size:25px;color:var(--coffee)}.products{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:13px}.product{background:var(--paper);border:1px solid #f0dfce;border-radius:18px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-width:0}.product img{width:100%;height:150px;object-fit:cover;background:#f4dfc7}.product-info{padding:11px;display:flex;flex-direction:column;flex:1}.product h3{margin:0 0 4px;font-size:16px}.desc{color:#876b57;font-size:12px;min-height:30px}.price{font-weight:900;color:#9b3e10;margin:7px 0}.product-actions{display:flex;align-items:center;gap:6px;margin-top:auto}.qty{display:flex;align-items:center;background:#f7eadc;border-radius:20px;padding:3px;gap:8px}.qty button{border:0;border-radius:50%;width:27px;height:27px;background:white;color:var(--coffee);font-weight:900}.qty span{min-width:12px;text-align:center}.add{border:0;border-radius:22px;background:var(--coffee);color:white;padding:9px 11px;font-weight:800;flex:1}.add:hover,.checkout:hover{background:#8b3d0b}.side{position:sticky;top:85px;display:grid;gap:14px}.panel{background:#fffaf3;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:var(--shadow)}.panel-head{background:var(--coffee);color:white;padding:13px 16px;font-weight:900;font-size:18px}.cart-body{padding:14px}.empty{text-align:center;padding:15px;color:var(--muted)}.cart-item{display:grid;grid-template-columns:1fr auto;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}.cart-item strong{font-size:13px}.cart-item small{display:block;color:var(--muted)}.cart-controls{display:flex;align-items:center;gap:5px}.cart-controls button{border:0;background:#f3e4d5;border-radius:50%;width:24px;height:24px;color:var(--coffee);font-weight:900}.totals{padding-top:12px;display:grid;gap:7px}.total-row{display:flex;justify-content:space-between;font-size:14px}.grand{font-weight:900;font-size:18px;color:var(--coffee);border-top:1px dashed var(--line);padding-top:10px}.form{padding:14px;display:grid;gap:9px}.field label{display:block;font-size:13px;font-weight:750;margin-bottom:4px}.field input,.field select,.field textarea{width:100%;border:1px solid #ddc9b5;border-radius:10px;padding:10px;background:white;outline-color:#b76b32}.field textarea{resize:vertical;min-height:65px}.required{color:#d33}.checkout{width:100%;border:0;border-radius:14px;background:var(--green);color:white;padding:13px;font-weight:900;font-size:15px}.hint{font-size:11px;color:var(--muted);text-align:center}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;background:#ffebd4;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:20px;text-align:center}.step b{display:block;font-size:24px;color:var(--brown)}.step span{font-size:12px;font-weight:700}.promo-row{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;margin-top:16px}.promo-row img{width:100%;height:155px;object-fit:cover;border-radius:18px;box-shadow:var(--shadow)}footer{margin-top:24px;background:var(--coffee);color:#fff2dc;padding:24px;text-align:center;font-weight:700}footer span{color:var(--gold)}.notice{font-size:12px;color:var(--muted);margin-top:8px}
+@media(max-width:1100px){.layout{grid-template-columns:1fr}.side{position:static;grid-template-columns:1fr 1fr}.products{grid-template-columns:repeat(3,1fr)}.brand{min-width:auto}.nav a{padding:8px}.topbar{gap:10px;flex-wrap:wrap}.search{order:4;flex-basis:100%;margin:0}}
+@media(max-width:650px){.wrap{padding:12px}.topbar{padding:10px 12px}.brand{flex:1}.brand strong{font-size:23px}.nav{order:3;width:100%;overflow:auto}.nav a{white-space:nowrap;font-size:12px}.hero{height:230px;padding:22px;background-position:center}.hero h1{font-size:32px;max-width:75%}.hero p{font-size:14px;max-width:70%}.shipping{right:10px;top:12px;padding:8px 12px;font-size:12px}.shipping b{font-size:20px}.products{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.product img{height:125px}.product h3{font-size:14px}.product-info{padding:9px}.add{font-size:12px;padding:8px 7px}.qty{gap:4px}.qty button{width:23px;height:23px}.side{grid-template-columns:1fr}.steps{grid-template-columns:repeat(2,1fr)}.promo-row{grid-template-columns:1fr}.promo-row img{height:130px}.section-title h2{font-size:21px}}
+
+/* Responsive refresh: comfortable shopping on phones, tablets and desktops */
+body { min-width: 320px; }
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid #e9a52a; outline-offset: 2px; }
+.topbar { min-height: 72px; }
+.brand, .nav { flex-shrink: 0; }
+.wrap { width: min(100%, 1540px); }
+.layout { grid-template-columns: minmax(0, 1fr) minmax(300px, 350px); gap: 22px; }
+#menu { min-width: 0; }
+.products { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.product { transition: transform .18s ease, box-shadow .18s ease; }
+.product:hover { transform: translateY(-3px); box-shadow: 0 12px 28px #60300d24; }
+.product img { aspect-ratio: 4 / 3; height: auto; }
+.product-info { padding: 13px; }
+.product h3 { line-height: 1.3; min-height: 2.6em; }
+.add, .checkout, .cart-pill, .cat { min-height: 44px; }
+.field input, .field select, .field textarea { min-height: 44px; font-size: 16px; }
+.field textarea { min-height: 82px; }
+.side { top: 90px; }
+.mobile-buy-bar { display: none; }
+@media (min-width: 1400px) { .products { grid-template-columns: repeat(5, minmax(0, 1fr)); } .hero { min-height: 300px; } }
+@media (max-width: 1050px) {
+ .topbar { flex-wrap: wrap; gap: 10px 14px; padding: 10px 18px; }
+ .brand { min-width: 190px; }
+ .nav { order: 3; width: 100%; overflow-x: auto; padding-bottom: 2px; }
+ .nav a { white-space: nowrap; }
+ .search { flex: 1; min-width: 180px; margin-left: auto; }
+ .layout { grid-template-columns: minmax(0, 1fr) 310px; }
+ .products { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 760px) {
+ body { padding-bottom: calc(76px + env(safe-area-inset-bottom)); }
+ .topbar { position: sticky; top: 0; padding: 9px 12px; gap: 8px; }
+ .brand { min-width: 0; flex: 1; gap: 7px; }
+ .brand-icon { font-size: 30px; } .brand strong { font-size: 22px; } .brand small { font-size: 10px; }
+ .cart-pill { padding: 10px 12px; font-size: 12px; min-height: 40px; }
+ .search { order: 3; flex-basis: 100%; min-width: 0; }
+ .search input { padding: 10px 6px; }
+ .nav { order: 4; width: 100%; gap: 5px; }
+ .nav a { padding: 8px 11px; font-size: 12px; }
+ .wrap { padding: 12px; }
+ .hero { min-height: 245px; height: auto; padding: 22px 18px; border-radius: 18px; background-position: 56% center; }
+ .hero-copy { max-width: 78%; }
+ .hero h1 { max-width: 100%; font-size: clamp(27px, 7vw, 38px); }
+ .hero p { max-width: 100%; font-size: 13px; line-height: 1.45; }
+ .hero .cta { min-height: 44px; padding: 11px 16px; }
+ .shipping { right: 9px; top: 10px; max-width: 112px; padding: 8px 9px; font-size: 10px; border-radius: 13px; }
+ .shipping b { font-size: 19px; }
+ .layout { display: flex; flex-direction: column; gap: 16px; margin-top: 14px; }
+ #menu { width: 100%; }
+ .categories { gap: 8px; margin-right: -12px; padding: 3px 12px 12px 0; scroll-snap-type: x proximity; }
+ .cat { min-height: 42px; padding: 9px 14px; font-size: 13px; scroll-snap-align: start; }
+ .section-title { gap: 8px; align-items: flex-start; }
+ .section-title h2 { font-size: 20px; line-height: 1.25; }
+ .section-title small { font-size: 10px; text-align: right; }
+ .products { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+ .product { border-radius: 15px; }
+ .product img { aspect-ratio: 1.18 / 1; }
+ .product-info { padding: 9px; }
+ .product h3 { font-size: 14px; min-height: 2.5em; }
+ .desc { font-size: 11px; min-height: 30px; line-height: 1.35; }
+ .price { font-size: 14px; margin: 6px 0 8px; }
+ .product-actions { flex-wrap: wrap; gap: 6px; }
+ .qty { flex: 0 0 auto; gap: 5px; }
+ .qty button { width: 29px; height: 29px; }
+ .add { flex: 1 1 100%; width: 100%; min-height: 40px; padding: 8px 6px; font-size: 12px; }
+ .side { width: 100%; display: grid; grid-template-columns: 1fr; gap: 12px; position: static; }
+ .panel { border-radius: 16px; }
+ .panel-head { font-size: 16px; padding: 12px 14px; }
+ .cart-body, .form { padding: 12px; }
+ .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; padding: 13px 10px; }
+ .step { background: #fff6eb; border-radius: 12px; padding: 10px 5px; }
+ .step b { font-size: 21px; }
+ .step span { font-size: 11px; line-height: 1.35; display: block; }
+ .promo-row { grid-template-columns: 1fr; gap: 10px; }
+ .promo-row img { height: auto; aspect-ratio: 16 / 6; }
+ footer { padding: 20px 14px; font-size: 14px; }
+ .mobile-buy-bar { position: fixed; z-index: 30; left: 10px; right: 10px; bottom: calc(9px + env(safe-area-inset-bottom)); display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 54px; padding: 8px 13px; border-radius: 16px; background: #542006; color: #fff; text-decoration: none; box-shadow: 0 7px 24px #32130045; font-size: 13px; }
+ .mobile-buy-bar strong { color: #ffd36b; font-size: 15px; white-space: nowrap; }
+ .mobile-buy-action { background: #f5b52e; color: #32190d; padding: 9px 11px; border-radius: 11px; font-weight: 900; white-space: nowrap; }
+}
+@media (max-width: 380px) {
+ .hero { min-height: 225px; } .hero-copy { max-width: 82%; } .hero h1 { font-size: 26px; }
+ .shipping { max-width: 98px; font-size: 9px; } .shipping b { font-size: 17px; }
+ .section-title small { display: none; } .products { gap: 8px; } .product-info { padding: 8px; }
+ .qty { gap: 3px; } .qty button { width: 26px; height: 26px; }
+}
+
+
+/* Pickup orders do not require delivery address */
+.delivery-address-field.is-hidden { display:none !important; }
+.pickup-note { display:none; padding:11px 13px; border-radius:11px; background:#eef8e9; color:#315b25; font-size:13px; line-height:1.45; }
+.pickup-note.is-visible { display:block; }
+/* Checkout form is shown only after the customer taps the checkout button */
+.open-checkout { margin-top: 14px; }
+.open-checkout:disabled { opacity: .48; cursor: not-allowed; }
+.checkout-modal { display:none; position:fixed; inset:0; z-index:100; padding:18px; align-items:center; justify-content:center; }
+.checkout-modal.is-open { display:flex; }
+.checkout-backdrop { position:absolute; inset:0; background:rgba(35,16,5,.62); backdrop-filter:blur(4px); }
+.checkout-dialog { position:relative; z-index:1; width:min(100%,560px); max-height:min(92vh,850px); overflow:auto; background:#fffaf3; border:1px solid #ead6c2; border-radius:22px; box-shadow:0 24px 80px #1b0b0566; }
+.checkout-dialog-head { display:flex; justify-content:space-between; align-items:center; gap:12px; padding:17px 20px; background:#542006; color:#fff7ec; }
+.checkout-dialog-head div { display:grid; grid-template-columns:auto 1fr; column-gap:9px; align-items:center; }
+.checkout-dialog-head span { grid-row:span 2; font-size:25px; }
+.checkout-dialog-head strong { font-size:19px; }
+.checkout-dialog-head small { color:#f5d8bd; font-size:12px; }
+.close-checkout { border:0; width:38px; height:38px; border-radius:50%; background:#ffffff20; color:white; font-size:27px; line-height:1; }
+.checkout-dialog .form { padding:18px 20px 20px; gap:12px; }
+.checkout-dialog .field label { font-size:14px; }
+.checkout-dialog .field input,.checkout-dialog .field select,.checkout-dialog .field textarea { min-height:46px; font-size:16px; }
+.checkout-dialog .field textarea { min-height:76px; }
+.checkout-summary { display:flex; justify-content:space-between; align-items:center; padding:12px 14px; border-radius:12px; background:#ffecd6; color:#542006; }
+.checkout-summary strong { font-size:18px; }
+body.modal-open { overflow:hidden; }
+@media(max-width:650px) {
+ .checkout-modal { padding:8px; align-items:flex-end; }
+ .checkout-dialog { width:100%; max-height:94dvh; border-radius:20px 20px 12px 12px; }
+ .checkout-dialog-head { padding:14px 16px; }
+ .checkout-dialog .form { padding:14px 15px calc(18px + env(safe-area-inset-bottom)); gap:10px; }
+}
+
+</style></head>
+<body>
+<header class="topbar"><a class="brand" href="#beranda" style="text-decoration:none"><span class="brand-icon">☕</span><span><strong>Kopi Kita</strong><small>Ngopi • Ngemil • Bahagia</small></span></a><nav class="nav"><a class="active" href="#beranda">⌂ Beranda</a><a href="#menu">▦ Menu</a><a href="#promo">🎁 Promo</a><a href="#cara">Cara Pesan</a></nav><div class="search">⌕ <input id="search" type="search" placeholder="Cari menu favorit..."></div><button class="cart-pill" onclick="document.getElementById('keranjang').scrollIntoView({behavior:'smooth'})">🛒 Keranjang <span id="cartCount">0</span></button></header>
+<a class="mobile-buy-bar" href="#keranjang" aria-label="Lihat keranjang dan lanjut pesan">
+  <span>🛒 <b id="mobileCartCount">0</b> item</span>
+  <strong id="mobileCartTotal">Rp0</strong>
+  <span class="mobile-buy-action">Lihat Keranjang →</span>
+</a>
+<main class="wrap" id="beranda">
+<section class="hero"><div class="hero-copy"><h1>Nikmatnya Ngopi & Makan Dalam Satu Tempat!</h1><p>Pesan sekarang, lebih mudah, lebih hemat, langsung diantar.</p><button class="cta" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Pesan Sekarang →</button></div><div class="shipping">ONGKIR HANYA<b>Rp2.000</b>untuk pesanan antar</div></section>
+<div class="layout"><section id="menu"><div class="categories" id="categories"><button class="cat active" data-cat="Semua">☷ Semua</button><button class="cat" data-cat="Kopi">☕ Kopi</button><button class="cat" data-cat="Non Kopi">🥤 Non Kopi</button><button class="cat" data-cat="Makanan">🍛 Makanan</button><button class="cat" data-cat="Snack">🍟 Snack</button><button class="cat" data-cat="Bakery">🍰 Bakery</button></div><div class="section-title"><h2>👑 Menu Favorit Kami</h2><small>Fresh • Enak • Harga Bersahabat</small></div><div class="products" id="products"></div>
+<div class="steps" id="cara"><div class="step"><b>① 🔎</b><span>Pilih menu favoritmu</span></div><div class="step"><b>② 🛒</b><span>Tambahkan ke keranjang</span></div><div class="step"><b>③ 📝</b><span>Isi data dan alamat</span></div><div class="step"><b>④ 💬</b><span>Kirim pesanan via WhatsApp</span></div></div><div class="promo-row" id="promo"><img src="assets/cara-pesan.jpg" alt="Panduan pemesanan Kopi Kita"><img src="assets/promo.jpg" alt="Promo Kopi Kita"></div></section>
+<aside class="side"><section class="panel" id="keranjang"><div class="panel-head">🛒 Keranjang Belanja</div><div class="cart-body"><div id="cartItems" class="empty">Keranjang masih kosong.<br>Yuk, pilih menu favoritmu!</div><div class="totals"><div class="total-row"><span>Subtotal</span><strong id="subtotal">Rp0</strong></div><div class="total-row"><span>Ongkir</span><strong id="shippingCost">Rp0</strong></div><div class="total-row grand"><span>Total Bayar</span><strong id="grandTotal">Rp0</strong></div></div><button class="checkout open-checkout" id="openCheckout" type="button" disabled>📝 Lanjut ke Form Pemesanan</button><div class="hint">Isi data pengiriman setelah memilih menu.</div></div></section>
+</aside></div>
+<div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+  <div class="checkout-backdrop" data-close-checkout></div>
+  <section class="checkout-dialog" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="checkout-dialog-head"><div><span>📝</span><strong id="checkoutTitle">Form Pemesanan</strong><small>Lengkapi data untuk mengirim pesanan</small></div><button type="button" class="close-checkout" aria-label="Tutup" data-close-checkout>×</button></div>
+    <form class="form" id="orderForm">
+      <div class="field"><label>Nama Lengkap <i class="required">*</i></label><input id="customer" required placeholder="Contoh: Budi Santoso" autocomplete="name"></div>
+      <div class="field"><label>Nomor WhatsApp <i class="required">*</i></label><input id="phone" required inputmode="tel" placeholder="Contoh: 08123456789" autocomplete="tel"></div>
+      <div class="field delivery-address-field" id="addressField"><label>Alamat Lengkap <i class="required">*</i></label><textarea id="address" required placeholder="Nama jalan, nomor rumah, RT/RW, patokan..." autocomplete="street-address"></textarea></div>
+      <div class="field delivery-address-field" id="cityField"><label>Kecamatan / Kota <i class="required">*</i></label><input id="city" required placeholder="Contoh: Karawang Barat" autocomplete="address-level2"></div>
+      <div class="field"><label>Metode Pengiriman</label><select id="delivery"><option value="antar">Diantar ke alamat (+Rp2.000)</option><option value="ambil">Ambil sendiri (tanpa ongkir)</option></select></div><div class="pickup-note" id="pickupNote">Kamu memilih ambil sendiri. Alamat tidak perlu diisi dan ongkir gratis.</div>
+      <div class="field"><label>Metode Pembayaran</label><select id="payment"><option>Bayar di Tempat (COD)</option><option>Transfer Bank</option><option>E-Wallet</option></select></div>
+      <div class="field"><label>Catatan Pesanan (Opsional)</label><textarea id="notes" placeholder="Contoh: Tidak pedas, gula sedikit..."></textarea></div>
+      <div class="checkout-summary" id="checkoutSummary">Total pesanan: <strong id="modalTotal">Rp0</strong></div>
+      <button class="checkout" type="submit">🟢 Pesan Sekarang via WhatsApp</button>
+      <div class="hint">Pesanan dikirim ke WhatsApp 089531706388.</div>
+      <div class="notice">Ongkir Rp2.000 untuk pesanan yang diantar. Ambil sendiri gratis.</div>
+    </form>
+  </section>
+</div>
+</main>
+<footer>☕ <span>Kopi Kita</span> — Terima kasih sudah memesan!<br><small>Butuh bantuan? WhatsApp 089531706388</small></footer>
+<script>
+const WA='6289531706388', SHIPPING=2000;
+const products=[
+{id:1,name:'Es Kopi Susu Gula Aren',cat:'Kopi',price:18000,img:'assets/es-kopi-susu.jpg',desc:'Espresso, susu creamy, dan manis gula aren'},
+{id:2,name:'Matcha Latte',cat:'Non Kopi',price:20000,img:'assets/matcha-latte.jpg',desc:'Matcha lembut dengan susu segar'},
+{id:3,name:'Thai Tea',cat:'Non Kopi',price:18000,img:'assets/thai-tea.jpg',desc:'Teh Thailand creamy dan harum'},
+{id:4,name:'Nasi Ayam Geprek',cat:'Makanan',price:25000,img:'assets/nasi-ayam.jpg',desc:'Nasi hangat, ayam geprek, dan sambal pilihan'},
+{id:5,name:'Kentang Goreng',cat:'Snack',price:15000,img:'assets/kentang-goreng-baru.jpg',desc:'Kentang goreng renyah dengan saus cocol'},
+{id:6,name:'Es Cokelat',cat:'Non Kopi',price:18000,img:'assets/es-cokelat.jpg',desc:'Cokelat dingin creamy dengan taburan cokelat'},
+{id:7,name:'Ayam Crispy (Tanpa Nasi)',cat:'Makanan',price:22000,img:'assets/ayam-saja.jpg',desc:'Ayam crispy renyah, tanpa nasi'},
+{id:8,name:'Burger Beef',cat:'Makanan',price:25000,img:'assets/burger.jpg',desc:'Beef patty, keju, sayur segar, dan saus spesial'},
+{id:9,name:'Potato Wedges',cat:'Snack',price:16000,img:'assets/potato-wedges.jpg',desc:'Kentang wedges berbumbu gurih'},
+{id:10,name:'Cinnamon Roll',cat:'Bakery',price:17000,img:'assets/cinnamon-roll.jpg',desc:'Roti gulung kayu manis dengan glaze lembut'},
+{id:11,name:'Croissant Cokelat',cat:'Bakery',price:19000,img:'assets/croissant-cokelat.jpg',desc:'Pastry renyah dengan isian cokelat'},
+{id:12,name:'Chocolate Cake',cat:'Bakery',price:22000,img:'assets/cake-cokelat.jpg',desc:'Kue cokelat berlapis dengan topping cokelat'}
+];
+let cart={},category='Semua',searchText='';const rupiah=n=>'Rp'+n.toLocaleString('id-ID');
+function renderProducts(){const list=products.filter(p=>(category==='Semua'||p.cat===category)&&(`${p.name} ${p.cat}`.toLowerCase().includes(searchText)));document.getElementById('products').innerHTML=list.length?list.map(p=>`<article class="product"><img src="${p.img}" alt="${p.name}" loading="lazy"><div class="product-info"><h3>${p.name}</h3><div class="desc">${p.desc}</div><div class="price">${rupiah(p.price)}</div><div class="product-actions"><div class="qty"><button aria-label="Kurangi" onclick="changeQty(${p.id},-1)">−</button><span id="qty-${p.id}">${cart[p.id]||0}</span><button aria-label="Tambah" onclick="changeQty(${p.id},1)">+</button></div><button class="add" onclick="addToCart(${p.id})">＋ Keranjang</button></div></div></article>`).join(''):'<p>Menu tidak ditemukan. Coba kata kunci lain.</p>';}
+function changeQty(id,n){cart[id]=Math.max(0,(cart[id]||0)+n);if(!cart[id])delete cart[id];renderProducts();renderCart()}
+function addToCart(id){changeQty(id,1)}
+function renderCart(){const entries=Object.entries(cart);let count=entries.reduce((s,[,q])=>s+q,0),sub=entries.reduce((s,[id,q])=>s+products.find(p=>p.id==id).price*q,0),ship=count&&document.getElementById('delivery').value==='antar'?SHIPPING:0;document.getElementById('cartCount').textContent=count;document.getElementById('mobileCartCount').textContent=count;document.getElementById('mobileCartTotal').textContent=rupiah(sub+ship);document.getElementById('subtotal').textContent=rupiah(sub);document.getElementById('shippingCost').textContent=rupiah(ship);document.getElementById('grandTotal').textContent=rupiah(sub+ship);document.getElementById('modalTotal').textContent=rupiah(sub+ship);document.getElementById('openCheckout').disabled=!count;document.getElementById('cartItems').className=entries.length?'':'empty';document.getElementById('cartItems').innerHTML=entries.length?entries.map(([id,q])=>{let p=products.find(x=>x.id==id);return `<div class="cart-item"><div><strong>${p.name}</strong><small>${rupiah(p.price)} × ${q}</small></div><div class="cart-controls"><button onclick="changeQty(${id},-1)">−</button><b>${q}</b><button onclick="changeQty(${id},1)">+</button></div></div>`}).join(''):'Keranjang masih kosong.<br>Yuk, pilih menu favoritmu!';}
+document.querySelectorAll('.cat').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.cat').forEach(x=>x.classList.remove('active'));b.classList.add('active');category=b.dataset.cat;renderProducts()}));document.getElementById('search').addEventListener('input',e=>{searchText=e.target.value.toLowerCase().trim();renderProducts()});
+
+const checkoutModal=document.getElementById('checkoutModal');
+document.getElementById('openCheckout').addEventListener('click',()=>{
+  if(!Object.keys(cart).length){alert('Keranjang masih kosong. Silakan pilih menu terlebih dahulu.');return;}
+  checkoutModal.classList.add('is-open');checkoutModal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');
+  setTimeout(()=>document.getElementById('customer').focus(),80);
+});
+function closeCheckout(){checkoutModal.classList.remove('is-open');checkoutModal.setAttribute('aria-hidden','true');document.body.classList.remove('modal-open');}
+checkoutModal.querySelectorAll('[data-close-checkout]').forEach(el=>el.addEventListener('click',closeCheckout));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&checkoutModal.classList.contains('is-open'))closeCheckout();});
+
+
+
+function updateDeliveryFields(){
+  const pickup=document.getElementById('delivery').value==='ambil';
+  document.getElementById('addressField').classList.toggle('is-hidden',pickup);
+  document.getElementById('cityField').classList.toggle('is-hidden',pickup);
+  document.getElementById('pickupNote').classList.toggle('is-visible',pickup);
+  document.getElementById('address').required=!pickup;
+  document.getElementById('city').required=!pickup;
+  renderCart();
+}
+document.getElementById('delivery').addEventListener('change',updateDeliveryFields);
+
+document.getElementById('orderForm').addEventListener('submit',e=>{e.preventDefault();const entries=Object.entries(cart);if(!entries.length){alert('Keranjang masih kosong. Silakan pilih menu terlebih dahulu.');return}const name=document.getElementById('customer').value.trim(),phone=document.getElementById('phone').value.trim(),address=document.getElementById('address').value.trim(),city=document.getElementById('city').value.trim(),delivery=document.getElementById('delivery').value,payment=document.getElementById('payment').value,notes=document.getElementById('notes').value.trim();const sub=entries.reduce((s,[id,q])=>s+products.find(p=>p.id==id).price*q,0),ship=delivery==='antar'?SHIPPING:0,total=sub+ship;let lines=entries.map(([id,q])=>{let p=products.find(x=>x.id==id);return `• ${p.name} x${q} = ${rupiah(p.price*q)}`});const addressLine=delivery==='antar'?`Alamat: ${address}, ${city}\n`:'';let msg=`Halo Kopi Kita! Saya ingin memesan:\n\n${lines.join('\n')}\n\nSubtotal: ${rupiah(sub)}\nOngkir: ${rupiah(ship)}\nTOTAL: ${rupiah(total)}\n\nNama: ${name}\nNo. WhatsApp: ${phone}\n${addressLine}Pengiriman: ${delivery==='antar'?'Diantar (+Rp2.000)':'Ambil sendiri'}\nPembayaran: ${payment}\nCatatan: ${notes||'-'}\n\nMohon konfirmasi pesanan saya. Terima kasih.`;window.open(`https://wa.me/${WA}?text=${encodeURIComponent(msg)}`,'_blank');});
+renderProducts();renderCart();
+</script></body></html>
